@@ -1,0 +1,43 @@
+<html ng-app='app'>
+
+<head>
+  <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.9/angular.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.9/angular-route.min.js'></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link href='https://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,300' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Sintony' rel='stylesheet' type='text/css'>
+  <script src='app.js'></script>
+</head>
+
+<body ng-controller='MainController'>
+<div class='headerContainer'>
+  <header class ='myHeader' ng-model='selectedItem' ng-style="{'background-image': 'url(' + selectedItem.img + ')'}"
+></header>
+  <p class='welcome' ng-if='introVisible'>Welcome to Shpicks</p>
+  <p class='headerText'>{{selectedItem.name}}</p>
+
+
+</div>
+  <div class='grid'>
+    <select class='filterButton' ng-init="selectedItem.name = cities[0].name" ng-model="selectedItem" ng-options="S.name for S in cities" ng-change="filterCity(selectedItem.name)">
+    </select>
+    <input class = 'searchBar' type="text" ng-model="search" placeholder="Search"/>
+    <br>
+    <div class='gridElement' ng-repeat="key in filteredItems | filter: search" >
+      <div>
+      <div class='{{key.tried}}'>
+      <a class ='name' href="{{key.link}}">{{key.name}}</a>
+      <p class='category'>{{key.category || "No category provided"}}</p>
+      <p class='location'>{{key.location || "No location provided"}}</p>
+      <p class ='comments'>{{key.comments || "No description"}}</p>
+      <p class='price' ng-if="key.price != '0'">{{key.price}}</p>
+      <p class='liked' ng-if="key.liked == 'TRUE'">&#9829;</p>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

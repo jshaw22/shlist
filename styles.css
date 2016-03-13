@@ -1,0 +1,202 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  background-color:#E7E7E7;
+
+}
+.headerContainer {
+  position: relative;
+  height:300px;
+}
+.welcome {
+  position: absolute;
+  text-align: center;
+  line-height: 200px; 
+  font-size:40px;
+  margin: 0 auto;
+  font-family:'Roboto Slab', serif;
+  vertical-align: middle;
+  top:0;
+  left: 0;
+  width: 100%;
+
+}
+.headerText {
+  position: absolute;
+  text-align: center;
+  line-height: 300px; 
+  font-size:40px;
+  margin: 0 auto;
+  font-family:'Roboto Slab', serif;
+  vertical-align: middle;
+  top:0;
+  left: 0;
+  width: 100%;
+}
+
+header.myHeader{
+    position: absolute;
+    height:300px;
+    width:100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-position: -250 60%;
+    opacity: .4;
+}
+
+.grid {
+  margin-left:20px;
+  margin-right:20px;
+  margin-top:5px;
+  position:relative;
+}
+
+.gridElement {
+  height:200px;
+  float:left;
+  width:20%;
+  margin:1.5%;
+}
+
+.grid .filterButton {
+  position:absolute;
+  margin-left:1.5%;
+  display:inline-block;
+}
+
+.grid .searchBar {
+  float:right;
+  margin-right:10%;
+}
+
+select {
+    padding: 0;
+    margin: 0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background-color: #fff;
+
+}
+
+span {
+  font-size: 15px;
+  margin-left:10px;
+}
+.TRUE{
+  background-color:#EBEBEB;
+  height:200px;
+  position:relative;
+}
+.FALSE{
+  background-color:#d8d8d8;
+  height:200px;
+  position:relative;
+
+}
+
+.name{
+  font-size:20px;
+  width:100%;
+  display:block;
+  text-align:center;
+  font-family:'Roboto Slab', serif;
+  padding-top:15px;
+}
+.name:hover{
+  text-decoration: none;
+}
+
+.category{
+  font-size:15px;
+  width:100%;
+  display:block;
+  text-align:center;
+  text-transform: uppercase;
+  font-family:'Sintony';
+  margin-top:10px;
+  margin-bottom:5px;
+
+
+}
+.location{
+  font-size:15px;
+  width:100%;
+  display:block;
+  text-align:center;
+  text-transform: uppercase;
+  font-family:'Sintony';
+  margin-bottom:5px;
+}
+
+.comments {
+  font-size:13px;
+  width:100%;
+  display:block;
+  text-align:center;
+  font-family: 'Lato Light', sans-serif;
+  margin-bottom:5px;
+}
+
+.price {
+  position:absolute;
+  float:left;
+  bottom:5;
+  left:5;
+}
+
+.liked {
+  position:absolute;
+  float:right;
+  bottom:5;
+  right:5;
+}
+
+
+
+
+
+

@@ -1,0 +1,32 @@
+<!--page isnt getting scope vars. Do I need to init ng-app and controller if I already do that in Route in app.js? -->
+
+<html>
+<head>
+  <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.9/angular.min.js'></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link href='https://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,300' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Sintony' rel='stylesheet' type='text/css'>
+</head>
+
+<body ng-controller="MainController">
+  <form novalidate class="simple-form">
+  <select class='filterButton' ng-model="selectedItem" ng-options="S.name for S in cities">
+    Name: 
+    <input type="text" ng-model="restaurant.name" />
+    <br /> Link: 
+    <input type="text" ng-model="restaurant.link" />
+    <br /> Type:
+    <input type="text" ng-model="restaurant.type" />
+    <br /> District:
+    <input type="text" ng-model="restaurant.district" />
+    <br /> Dollar Signs:
+    <input type="text" ng-model="restaurant.dollarsigns" />
+    <br /> Description:
+    <input type="text" ng-model="restaurant.description" />
+    <br />
+    <input type="submit" ng-click="add(restaurant)" value="Save" />
+  </form>
+</body>
