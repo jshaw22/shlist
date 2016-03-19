@@ -10,7 +10,7 @@ angular.module('app', ['ngRoute']).config(function($routeProvider) {
             // route for the submission page *secret to only sharon* 
             .when('/sharonsubmit', {
                 templateUrl : 'sharonsubmit.html',
-                controller  : 'MainController'
+                controller  : 'SubmitController'
             })
     })
 .controller('MainController', function($scope, $location){
@@ -64,4 +64,10 @@ angular.module('app', ['ngRoute']).config(function($routeProvider) {
       return elem.li === parameter;
     })
   }
+}).controller('SubmitController', function($scope){
+  $scope.test = function(){
+    console.log("Clicked")
+    alert("Ive been clicked");
+  }
 })
+

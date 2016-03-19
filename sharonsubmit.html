@@ -11,7 +11,7 @@
   <link href='https://fonts.googleapis.com/css?family=Sintony' rel='stylesheet' type='text/css'>
 </head>
 
-<body ng-controller="MainController">
+<body ng-controller="SubmitController">
   <form novalidate class="simple-form">
   <select class='filterButton' ng-model="selectedItem" ng-options="S.name for S in cities">
     Name: 
@@ -29,4 +29,6 @@
     <br />
     <input type="submit" ng-click="add(restaurant)" value="Save" />
   </form>
+  <input ng-model='model'/>
+  <button ng-click='test()'>Alert Hi</button>
 </body>
